@@ -9,7 +9,7 @@ int *vetor; // declarando vetor de inteiros.
 int *vetorAux; // declarando vetor auxiliar de inteiros.
 
 // método que será executado pelas threads
-void * dobraVetor(void *arg) {
+void * vetorAoQuadrado(void *arg) {
 
     int thread_num = *((int *)arg);
     int lote = N / (M * (N/M));
@@ -49,15 +49,15 @@ int comparator(const void *a, const void *b) {
 }
 
  // criando teste para validar resultados
-int testVetor(int vetorOriginal[], int vetorDobrado[]) {
+int testVetor(int vetorOriginal[], int vetorQuadrado[]) {
 
     // utilizando o método qsort da biblioteca stdlib.h para ordenar valores de um vetor:
      qsort(vetorOriginal, N, sizeof(int), comparator);
-     qsort(vetorDobrado, N, sizeof(int), comparator);
+     qsort(vetorQuadrado, N, sizeof(int), comparator);
     for (int i = 0; i < N; i++) {
         int quadrado = vetorOriginal[i]*vetorOriginal[i];
-        if (quadrado != vetorDobrado[i]) {
-            printf("Original: %.2d | Vetor quadrado: %.2d\n", vetorOriginal[i], vetorDobrado[i]);
+        if (quadrado != vetorQuadrado[i]) {
+            printf("Original: %.2d | Vetor quadrado: %.2d\n", vetorOriginal[i], vetorQuadrado[i]);
             return 1;
         }
     }
@@ -73,7 +73,7 @@ int main(void) {
 
     for (int i = 1; i <= M; i++) {
         threads[i] = i;
-        if (pthread_create(&tid_sistema[i], NULL, dobraVetor, (void *)&threads[i])) {
+        if (pthread_create(&tid_sistema[i], NULL, vetorAoQuadrado, (void *)&threads[i])) {
             printf("--ERRO: pthread_create()\n");
             exit(-1);
         }
