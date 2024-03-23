@@ -20,6 +20,10 @@ void * vetorAoQuadrado(void *arg) {
     }
 
     int fim = thread_num * (N/M) * lote;
+    // para garantir casos ímpares chegarem ao fim dos inteiros:
+    if (thread_num == M) {
+        fim = N;
+    }
     printf("Thread nº%.2d está executando o lote do %.2d ao %.2d\n", thread_num, inicio, fim);
 
     for (int i = inicio; i < fim; i++) {
