@@ -10,7 +10,7 @@ do vetor original e uma cópia auxiliar.
 
 No arquivo 'threads.c' você encontrará a tarefa determinada para cada thread realizar a execução (```vetorAoQuadrado```),
 escolhi uma lógica que divide os inteiros em lotes, nos quais cada thread realiza a rotina de "elevar ao quadrado"
-o valor de cada inteiro dentro deste lote, a fim de não termos resultados equivocados no fim.
+o valor de cada inteiro dentro de um lote específico, a fim de não termos resultados equivocados no fim.
 
 No arquivo 'metodos_vetor.c', tentei englobar todos os métodos que utilizei para manipulaçao de vetores, onde
 inclui o método ```test_vetor```, no qual é responsável por realizar o teste dos resultados após os novos fluxos
