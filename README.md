@@ -17,8 +17,8 @@ inclui o método ```test_vetor```, no qual é responsável por realizar o teste 
 de execução realizarem as tarefas destinadas.
 
 Por fim, o arquivo 'main.c', sendo o arquivo principal, toma conta de realizar a criação das threads e definir
-qual método irão executar, ele também armazena o vetor auxiliar durante a execução e chama a funcão de teste
-para verificar se tudo está ok e libera o espaço alocado para os vetores na memória.
+qual método irão executar, ele também armazena o vetor auxiliar durante a execução, chama a funcão de teste
+para verificar se tudo está ok e libera o espaço alocado para os vetores na memória no fim.
 
 Para executar o programa basta rodar ```gcc -o main main.c -lpthread -Wall```
 em seguida, rode ```./main```.
