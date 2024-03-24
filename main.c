@@ -28,7 +28,6 @@ int main(void) {
         printf("Ocorreu um erro: Algum fluxo de execução não efetuou o cálculo correto.\n");
     }
 
-
     printf("--Thread principal terminou\n");
 
     //desfazendo os mallocs:

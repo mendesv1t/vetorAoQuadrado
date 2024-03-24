@@ -26,7 +26,6 @@ int testVetor(int vetorOriginal[], int vetorQuadrado[]) {
     for (int i = 0; i < N; i++) {
         int quadrado = vetorOriginal[i] * vetorOriginal[i];
         if (quadrado != vetorQuadrado[i]) {
-            printf("Original: %.2d | Vetor quadrado: %.2d\n", vetorOriginal[i], vetorQuadrado[i]);
             return 1;
         }
     }
