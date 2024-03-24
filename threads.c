@@ -1,3 +1,4 @@
+#include "pthread.h"
 #include "metodos_vetor.c"
 
 // método que será executado pelas threads

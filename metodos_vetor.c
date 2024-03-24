@@ -1,4 +1,5 @@
 #include "global.c"
+#include "stdlib.h"
 
 // método para criar vetor original e auxiliar:
 void preencheVetores() {

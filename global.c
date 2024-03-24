@@ -1,6 +1,4 @@
 #include "stdio.h"
-#include "stdlib.h"
-#include "pthread.h"
 
 // variáveis globais, que serão compartilhadas com os fluxos de execução criados:
 const int M = 2; // número de threads
