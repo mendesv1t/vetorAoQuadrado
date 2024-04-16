@@ -23,5 +23,3 @@ para verificar se tudo está ok e libera o espaço alocado para os vetores na me
 Para executar o programa basta rodar ```gcc -o main main.c -lpthread -Wall```
 em seguida, rode ```./main```.
 
-
-Após extraídos os resultados, montei a tabela de aceleração e eficiência via google sheets, onde pode ser visualizado [clicando aqui](https://docs.google.com/spreadsheets/d/1I2mPtZy2nrUx5JH-2edLzWk7lI-ODrL44sbVyXrHYHs/edit#gid=1618328427)
